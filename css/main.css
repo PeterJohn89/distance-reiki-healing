@@ -1,0 +1,447 @@
+/* 
+Author: Peter J Goodwin
+Date: 17/05/20
+
+--main
+--header
+--navbar
+
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+        line-height: 1;
+        font-family: 'Baloo 2', cursive;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+strong{
+        font-weight: 600;
+}
+em{
+       font-style: italic;
+}
+/* globel classes */
+.call-to-action{
+        color: #fff;
+        background-color: #122941;
+        border-color: #a8a6a1;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        line-height: normal;
+        padding: 10px 15px;
+        text-decoration: none;
+}
+.call-to-action::after{
+        font-family: "FontAwesome";
+        content: "\f061";
+        padding-left: 10px;
+}
+.full-w{
+        width: 100%;
+        display: block;
+}
+.current-link{
+        border-bottom: 2px solid #122941;
+        font-weight: 600;
+}
+.current-menu-item::before{
+        background-color: #333;
+}
+.clear{
+        clear: both;
+}
+
+.active_menu{
+        border-bottom: none;
+        height: 100%;
+        position: fixed;
+        z-index: 1111111111;
+        background: #fff;
+}
+
+.active_menu ul li{
+        width: 100%;
+        border-bottom: 1px solid #E3E3E6;
+}
+
+.active_menu ul li:last-child{
+        border-bottom: none;
+}
+
+
+
+
+
+
+.navbar{
+        width: 100%;
+        border-bottom: 1px solid rgb(10, 9, 9);
+}
+.navbar .logo{
+        width: 50px;
+        float: left;
+        padding: 13px 0px;
+        line-height: 2px;
+}
+.navbar .logo img{
+        width: 100%;
+}
+
+.navbar ul {
+        margin-bottom: 0px;
+        float: right;
+}
+.navbar ul li{
+        display: inline-block;
+        padding: 30px 10px;
+        margin: 0px;
+}
+.navbar ul li.navbar-item a.book-a-class{
+       padding: 15px;
+       background-color: #122941;
+       color: #fff;
+}
+.navbar ul li a{
+        text-decoration: none;
+        font-size: 16px;
+}
+.navbar .fa-bars, .navbar .fa-times{
+        display: none;
+}
+
+.main_slider{
+        background-image: url('../images/header001.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        position: relative;
+}
+.main_slider h1{
+        text-align: right;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0px;
+        font-size: 45px;
+        font-family: 'Dancing Script', cursive;
+}
+
+.main_slider .container{
+        height: 100%;
+}
+
+
+/* About contents */
+.row-contents{
+        margin-top: 150px;
+        position: relative;
+}
+.about-contents div img{
+        width: 100%;
+        height: auto;
+}
+.about-contents div:nth-child(2){
+       margin-top: 70px;
+}
+.about-contents div h2{
+        font-size: 28px;
+        margin-bottom: 15px;
+}
+.about-contents div p{
+        line-height: 24px;
+        margin-bottom: 15px;
+}
+
+.about-us-siderbar{
+        position: fixed;
+        left: 110px;
+        top: 50%;
+}
+
+.scroll-menu-items{
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        position: relative;
+        cursor: pointer;
+}
+
+.scroll-menu-items::before{
+        position: absolute;
+        content: "";
+        top: 1px;
+        left: -20px;
+        border: 1px solid #333;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+}
+.full-w-img{
+        
+}
+
+.about-us-bp{
+        background-image: url("../images/profile-002.jpg");
+        height: 500px;
+        background-position: center;
+        background-size: cover;  
+}
+
+
+
+.full-w-how-it-works{
+        background-image: url("../images/how-it-works.jpg");
+        height: 500px;
+        background-position: center;
+        background-size: cover;  
+        color: #fff;
+        position: relative;
+}
+.full-w-how-it-works .container-fw{
+        position: relative;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        box-sizing: border-box; 
+        height: 100%;
+}
+
+.full-w-how-it-works h2{
+        font-size: 38px;
+        margin-bottom: 20px;
+}
+
+.full-w-how-it-works ul li{
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+}
+
+.full-w-how-it-works .center-section{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+}
+
+
+.about-us-bg-colour{
+        background-color: #eeeeee5e;
+}
+.about-us-background-img{
+        background-image: url("../images/services001.jpg");
+        height: 535px;
+        background-position: center;
+        background-size: cover;  
+        background-repeat: no-repeat;
+        color: #333;
+        position: relative;
+}
+.about-us-w .container{
+        padding: 10% 0px;
+}
+
+.about-us-w .container h3{
+        font-size: 28px;
+        margin: 10px 1px;
+        font-family: 'Dancing Script', cursive;
+}
+.about-us-w .banner{
+        background-color: rgba(225, 225, 225, 0.5);
+}
+
+
+
+.about-us-w h2{
+        font-size: 28px;
+        margin-bottom: 20px;
+}
+
+.about-us-w span{
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        font-family: 'Dancing Script', cursive;
+        display: block;
+}
+
+.about-us-w p {
+        font-size: 16px;
+        line-height: 24px;;
+}
+
+.about-us-w .about-contents{
+        padding: 70px 0px;
+}
+
+.information-w .container{
+        padding: 150px 0px;
+}
+.information-w h2{
+        font-size: 28px;
+        margin-bottom: 20px;
+}
+
+.information-w p{
+        font-size: 16px;
+        line-height: 24px;
+}
+.information-w ul{
+        margin-left: 20px;
+}
+
+.information-w ul li{
+        padding: 10px 0px;
+        list-style: circle;
+}
+
+.full-w-background{
+        background-color: #122941;
+        padding: 15% 0px;
+}
+
+.full-w-background p{
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+}
+
+.about-us-w .center-section{
+        margin-top: 20%;
+}
+.about-us-w .center-section h2{
+        text-transform:capitalize;
+}
+
+
+
+
+
+/* Testimonial */
+.testimonial-w{
+        background-color: #eeeeee5e;
+}
+.test-contents h2{
+        font-size: 28px;
+        margin-bottom: 15px;
+}
+.test-contents .spaceing{
+        padding-top: 15px;
+
+}
+
+.test-contents{
+        padding: 50px 0px;
+}
+
+
+.test-contents div p{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 15px;
+}
+
+.test-contents .testimonial-slider div em::before, 
+.test-contents .testimonial-slider div em::after{
+        content: ' " ';
+}
+.tutorial-w{
+        padding: 50px 0px;
+}
+
+
+
+/* .tutorial-w div video{
+        width: 100%;;
+} */
+
+
+/* footer */
+.footer-wrapper{
+        background-color: #272725;
+        padding:100px 0px;
+        display: inline-block;
+        width: 100%;
+}
+
+.footer-wrapper h2{
+        font-size: 28px;
+        color: #fff;
+        margin-bottom: 15px;
+}
+
+.footer-wrapper ul li{
+        display: inline;
+}
+
+
+.footer-wrapper .six:nth-child(2) ul li{
+        display: block;
+        margin-bottom: 5px;
+}
+
+.footer-wrapper ul li a, .footer-wrapper ul li i{
+        padding-right: 10px;
+        text-decoration: none;
+}
+
+
+
+
+@media only screen and (max-width: 960px) {
+
+        .navbar .fa-bars{
+                display: block;
+                float: right;
+                font-size: 40px;
+                padding: 18px 0px;
+        }
+        .navbar .fa-times{
+                font-size: 40px;
+                padding: 18px 0px;
+                position: absolute;
+                right: 0px;
+        }
+        .navbar ul{
+                display: none;
+        }
+
+}
